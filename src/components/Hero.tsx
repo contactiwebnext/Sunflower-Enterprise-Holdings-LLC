@@ -10,16 +10,24 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenInquiry: _onOpenInquiry, onExploreServices }) => {
   return (
     <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
-      {/* Background Hero Image with Elegant Overlay */}
+      {/* Background Hero Video with Overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-          alt="Sunflower Enterprise Holdings LLC - Residential Property and Home Renovation Background"
-          className="w-full h-full object-cover object-center opacity-30 scale-105 transition-transform duration-1000 ease-out"
-        />
-        {/* Multilayer Dark Gradient Overlays for High Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/90 to-slate-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-slate-950/90" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+          className="w-full h-full object-cover object-center scale-105"
+        >
+          <source
+            src="https://xvcg4qpxeyomsdbd.public.blob.vercel-storage.com/Create_housing_services_video_202608230016.mp4"
+            type="video/mp4"
+          />
+        </video>
+        {/* Dark Translucent Gradient Overlays so video is clearly visible while keeping text legible */}
+        <div className="absolute inset-0 bg-slate-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/70" />
       </div>
       
       {/* Subtle grid accent */}
