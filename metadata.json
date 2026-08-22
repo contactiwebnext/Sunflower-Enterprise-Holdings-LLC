@@ -1,0 +1,6 @@
+{
+  "name": "Sunflower Enterprise Holdings LLC",
+  "description": "Professional housing services, home renovation, rental housing, and property improvements based in Metairie, Louisiana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
